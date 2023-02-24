@@ -1,3 +1,11 @@
-<a href="https://heroku.com/deploy?template=https://github.com/FlosumHeokuConn/FlosumPMD">
-  <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy">
-</a>
+## Build
+
+```shell
+docker build -t sottelli-flosum-pmd .
+```
+
+## Run
+
+```shell
+docker run --rm sottelli-flosum-pmd
+```

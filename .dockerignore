@@ -1,0 +1,5 @@
+.env
+.git
+.sfdx
+test.sh
+Dockerfile
