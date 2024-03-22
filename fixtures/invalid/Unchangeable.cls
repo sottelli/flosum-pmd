@@ -1,4 +1,4 @@
-global class Unchangeable {
+global class unchangeable {
     global UndeletableType unchangable(UndeletableType param) {
     }
 }

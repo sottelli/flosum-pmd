@@ -3,7 +3,7 @@ WORKDIR /app
 
 COPY . .
 
-RUN npm install
+RUN npm ci --production
 
 EXPOSE 5000
 

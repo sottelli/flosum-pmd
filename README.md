@@ -1,7 +1,7 @@
 ## Build
 
 ```shell
-docker build -t brunorossetto/sottelli-flosum-pmd:latest -t brunorossetto/sottelli-flosum-pmd:6.55.0 .
+docker build -t brunorossetto/sottelli-flosum-pmd:latest -t brunorossetto/sottelli-flosum-pmd:7.0.0 .
 ```
 
 ## Push to DockerHub

@@ -22,10 +22,10 @@
   "license": "BSD",
   "main": "index.js",
   "pmd": {
-    "version": "6.48.0"
+    "version": "7.0.0"
   },
   "scripts": {
-    "test": "bash test.sh",
+    "test": "node test.js",
     "start": "node index.js"
   }
 }
