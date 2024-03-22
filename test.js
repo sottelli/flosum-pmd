@@ -18,6 +18,6 @@ const ApexPMD = require("./ApexPMD");
   } catch (err) {
     console.error(err);
   } finally {
-    //fs.rmSync(jobId, { recursive: true, force: true });
+    fs.rmSync(jobId, { recursive: true, force: true });
   }
 })();
