@@ -177,7 +177,7 @@ class ApexPMD {
         if (fs.existsSync("./" + self.jobId + "/")) {
           if (fs.existsSync("./" + self.jobId + "/ruls.xml")) {
             var workerProcess = child_process.execSync(
-              "bash dist/pmd-bin/bin/pmd check --no-fail-on-violation --dir ./" +
+              "bash node_modules/pmd-bin/dist/pmd-bin/bin/pmd check --no-fail-on-violation --dir ./" +
                 self.jobId +
                 "/" +
                 " -f csv -r ./" +
