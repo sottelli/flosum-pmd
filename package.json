@@ -1,6 +1,6 @@
 {
   "name": "apex_pmd",
-  "version": "2.5.0",
+  "version": "7.4.0",
   "description": "Apex_PMD",
   "author": "D.Z.",
   "dependencies": {
@@ -9,7 +9,7 @@
     "express": "^4.18.1",
     "http": "0.0.0",
     "jsforce": "^1.11.0",
-    "pmd-bin": "^2.2.0",
+    "pmd-bin": "^2.3.0",
     "request": "^2.88.0"
   },
   "overrides": {
@@ -23,7 +23,7 @@
   "license": "BSD",
   "main": "index.js",
   "pmd": {
-    "version": "7.3.0"
+    "version": "7.4.0"
   },
   "scripts": {
     "test": "node test.js",
