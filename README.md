@@ -7,7 +7,7 @@ docker build -t sottelli-flosum-pmd .
 ## Run
 
 ```shell
-docker run --rm sottelli-flosum-pmd
+docker run --rm -p 5005:5000  -e username=sf -e password=sf  sottelli-flosum-pmd
 ```
 
 ## Create new Tag to Build in GitHub
