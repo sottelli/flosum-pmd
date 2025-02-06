@@ -41,7 +41,7 @@ app.post("//apexPMD", (req, res) => {
   res.send({ isSuccess: true, opStatus: "INPROGRESS" });
 });
 
-app.post("//oauth/token", (req, res) => {
+app.get("//oauth/token", (req, res) => {
   let user = "admin";
   let pass = "n2c99skEwmWvt3Q1p7d11ne4FKwPqCs85N2RvwNdlfMw4I3NL";
   let username = req.query.username;
@@ -81,7 +81,7 @@ app.post("//oauth/token", (req, res) => {
 });
 
 app.get("//", function (req, res) {
-  res.send("Ok. Ver:2.5.0. Ver.PMD: 7.0.0");
+  res.send("Ok. Ver:2.9.0. Ver.PMD: 7.10.0");
 });
 
 app.get("//server/log", function (req, res) {
