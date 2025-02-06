@@ -42,38 +42,30 @@ app.post("//apexPMD", (req, res) => {
 });
 
 app.get("//oauth/token", (req, res) => {
-  let user = "admin";
-  let pass = "n2c99skEwmWvt3Q1p7d11ne4FKwPqCs85N2RvwNdlfMw4I3NL";
-  let username = req.query.username;
-  let password = req.query.password;
-  if (username == user && password == pass) {
+  if (
+    req.headers.authorization &&
+    req.headers.authorization.search("Basic ") === 0
+  ) {
+    // fetch login and password
+    let userEnv = process.env.username;
+    let passEnv = process.env.password;
     if (
-      req.headers.authorization &&
-      req.headers.authorization.search("Basic ") === 0
+      new Buffer.from(
+        req.headers.authorization.split(" ")[1],
+        "base64"
+      ).toString() ==
+      userEnv + ":" + passEnv
     ) {
-      // fetch login and password
-      let userEnv = process.env.username;
-      let passEnv = process.env.password;
-      if (
-        new Buffer.from(
-          req.headers.authorization.split(" ")[1],
-          "base64"
-        ).toString() ==
-        userEnv + ":" + passEnv
-      ) {
-        let auth = {
-          access_token: "a54c0200-5f3b-4625-b231111112131213",
-          token_type: "bearer",
-          refresh_token: "475b9443-9cef-4468-a4be-e3f449da8d03",
-          expires_in: 1867,
-          scope: "read write trust",
-        };
-        res.send(auth);
-      } else {
-        res.send("wrong username or password");
-      }
+      let auth = {
+        access_token: "a54c0200-5f3b-4625-b231111112131213",
+        token_type: "bearer",
+        refresh_token: "475b9443-9cef-4468-a4be-e3f449da8d03",
+        expires_in: 1867,
+        scope: "read write trust",
+      };
+      res.send(auth);
     } else {
-      res.send("not authorization");
+      res.send("wrong username or password");
     }
   } else {
     res.send("not authorization");
