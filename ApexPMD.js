@@ -236,9 +236,7 @@ class ApexPMD {
           for (let i = 1; i < lines.length - 1; i++) {
             let violationStrings = lines[i].split('","');
             self.violList.push({
-              name: violationStrings[0].substring(
-                violationStrings[0].lastIndexOf(self.jobId) + 19
-              ),
+              name: violationStrings[0].substring(1),
               prior: violationStrings[1],
               pos: violationStrings[2],
               desc: violationStrings[3],
