@@ -1,16 +1,15 @@
 {
   "name": "apex_pmd",
-  "version": "7.15.0",
+  "version": "7.17.0",
   "description": "Apex_PMD",
   "author": "D.Z.",
   "dependencies": {
     "adm-zip": "^0.5.16",
     "dotenv": "^17.2.0",
     "express": "^5.1.0",
-    "http": "0.0.0",
+    "http": "0.0.1-security",
     "jsforce": "^3.9.1",
-    "pmd-bin": "^2.14.0",
-    "request": "^2.88.2"
+    "pmd-bin": "^2.16.0"
   },
   "overrides": {
     "jsforce": {
@@ -21,9 +20,10 @@
     "/dist"
   ],
   "license": "BSD",
+  "private": true,
   "main": "index.js",
   "pmd": {
-    "version": "7.15.0"
+    "version": "7.17.0"
   },
   "scripts": {
     "test": "node test.js",
